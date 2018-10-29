@@ -17,4 +17,4 @@ b) Steps to program the GERTBOARD
                   avr-objcopy -j .text -j .data -O ihex <file_name>.elf <file_name>.hex               // Creates Hex file
                   sudo avrdude -c gpio -p m328p -U flash:w:<file_name>.hex                            // Flashes the UC
                   
-                  Here -DF_CPU=12000000L is optional (Trying to figure it out)
+                  Here -DF_CPU=12000000L is used to configure the UART
