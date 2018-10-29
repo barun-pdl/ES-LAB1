@@ -1,0 +1,8 @@
+The first Section explains the following tasks:
+ a) Writing the Embedded C code
+ b) Steps to program the GERTBOARD
+ 
+ Command used==>  avr-gcc -g -Os -mmcu=atmega328p -DF_CPU=12000000L -c <file_name>.c -o <file_name>.o // Creates object File 
+                  avr-gcc -g -mmcu=atmega328p -o <file_name>.elf <file_name>.o                        // Creates elf file
+                  avr-objcopy -j .text -j .data -O ihex <file_name>.elf <file_name>.hex               // Creates Hex file
+                  sudo avrdude -c gpio -p m328p -U flash:w:<file_name>.hex                            // Flashes the UC
