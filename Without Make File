@@ -1,6 +1,16 @@
-The first Section explains the following tasks:
- a) Writing the Embedded C code
- b) Steps to program the GERTBOARD
+STEPS:
+a) Writing the Embedded C code
+   #define F_CPU 12000000L
+   #include <avr/io.h>
+   #include <util/delay.h>
+   int main(void)
+   {
+   
+   
+   return 0;
+   }
+
+b) Steps to program the GERTBOARD
  
  Command used==>  avr-gcc -g -Os -mmcu=atmega328p -DF_CPU=12000000L -c <file_name>.c -o <file_name>.o // Creates object File 
                   avr-gcc -g -mmcu=atmega328p -o <file_name>.elf <file_name>.o                        // Creates elf file
